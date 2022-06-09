@@ -1,4 +1,11 @@
 // 两数之和
+/*
+- 总结:
+  - 如果无序:使用哈希表
+    - 先全部插入哈希表，然后再搜索 【需要考虑数组中字符重复】
+    - 每次插入前查找哈希表是否存在 target-x
+  - 如果有序：可以使用对撞双指针
+*/
 
 //哈希表
 //  复杂度：
@@ -47,5 +54,24 @@ export function twoSum2(arr, target) {
     }
 
     j++;
+  }
+}
+
+// 有序
+export function twoSum3(arr, target) {
+  let i = 0;
+  let j = arr.length - 1;
+  let sum = 0;
+  while (i < j) {
+    sum = arr[i] + arr[j];
+    if (sum == target) {
+      return [i, j];
+    } else if (sum < target) {
+      // 如果 sum < target，移动较小的元素，使 sum 变大一些
+      i++;
+    } else if (sum > target) {
+      // 移动较大的元素，使 sum 变小一些
+      j--;
+    }
   }
 }
