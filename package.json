@@ -1,0 +1,24 @@
+{
+  "name": "algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "vitest packages/",
+    "test:array": "vitest packages/array"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xlearns/algorithm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xlearns/algorithm/issues"
+  },
+  "homepage": "https://github.com/xlearns/algorithm#readme",
+  "devDependencies": {
+    "vitest": "^0.14.1"
+  }
+}
