@@ -5,6 +5,7 @@
   "main": "",
   "scripts": {
     "test": "vitest packages/",
+    "test:other": "vitest packages/other",
     "test:array": "vitest packages/array"
   },
   "repository": {
