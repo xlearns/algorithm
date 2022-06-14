@@ -1,4 +1,5 @@
 /*
+dp二维数组
 1.建立状态转移方程
   * text1[i - 1] === text2[j - 1]: dp[i][j] = dp[i - 1][j - 1] + 1;
   * text1[i - 1] !== text2[j - 1]: dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
@@ -19,10 +20,12 @@ export function longestCommonSubsequence(text1,text2){
         // 相等就取前面子串的长度+1
         dp[i][j] = dp[i - 1][j - 1] + 1;
       }else{
+        // 不相等就去左边和上边取最大值
         dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
       }
     }
   }
+  //这样建成的二维数组最后一位就是最长公共子序列的长度
   
   return dp[m][n]
 }
